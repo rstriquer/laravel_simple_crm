@@ -2,7 +2,7 @@
 
 @section('content')
 @can('contact_insert')
-    <a class="btn btn-primary" href="{{ route('contact.show') }}">Inserir novo</a><br />
+    <a class="btn btn-primary" href="{{ route('contact.get') }}">Inserir novo</a><br />
 @endcan
 <div class="mt-8 mb-8 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
 <table class="table-auto min-w-full">
