@@ -6,10 +6,14 @@ use App\Models\Contact;
 
 class ContactGetFormController extends Controller
 {
-    public function __invoke(Contact $contact = null)
+    public function __invoke(int $id = null)
     {
-        switch ($contact) {
-            case null: $this->authorize('contact_insert'); break;
+        $contact = null;
+        switch ($id !== null) {
+            case true:
+                $this->authorize('contact_insert');
+                $contact = Contact::findOrFail($id);
+                break;
             default: $this->authorize('contact_edit');
         }
 
