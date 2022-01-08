@@ -20,5 +20,5 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', PublicContactIndexController::class)->name('public.index');
 Route::get('/contact/{id?}', ContactGetFormController::class)->name('contact.get');
-Route::post('/contact/{id}', ContactPostEditFormController::class)->name('contact.edit');
+Route::post('/contact/{id?}', ContactPostEditFormController::class)->name('contact.post');
 Route::post('/contact/delete', ContactDeleteController::class)->name('contact.delete');

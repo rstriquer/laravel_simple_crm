@@ -24,15 +24,15 @@
         <tr>
         @can('contact_delete')
         <th>
-            <input type="checkbox" value="{{$contact->id}}" name="selected">
+            <input type="checkbox" class="mr-2 ml-2" value="{{$contact->id}}" name="selected">
         </th>
         @endcan
-        <th class="w-64">{{ $contact->name }}</th>
+        <th class="w-64 ml-2">{{ $contact->name }}</th>
         <th>{{ $contact->contact }}</th>
         <th class="w-64">{{ $contact->email }}</th>
         @can('contact_edit')
         <th>
-            <a href="{{ route('contact.edit', $contact->id) }}">Edit</a>
+            <a class="ml-2 btn btn-primary" href="{{ route('contact.get', $contact->id) }}">Edit</a>
         </th>
         @endcan
         </tr>
