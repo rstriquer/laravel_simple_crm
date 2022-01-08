@@ -15,4 +15,4 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::get('/', PublicContactIndexController::class)->name('public.contact.index');
+Route::get('/', PublicContactIndexController::class)->name('public.index');
