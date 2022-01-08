@@ -16,7 +16,7 @@ class CreateContactsTable extends Migration
         Schema::create('contacts', function (Blueprint $table) {
             $table->id();
             $table->string('name')->index()->comment('Contact name. Should be a string of any size greater than 5');
-            $table->unsignedInteger('contact')->comment('Contact number. 9 digits max.');
+            $table->unsignedInteger('contact')->unique()->comment('Contact number. 9 digits max.');
             $table->string('email', 191)->unique()->comment('Contact email address. Should be a valid email');
             $table->timestamps();
         });
