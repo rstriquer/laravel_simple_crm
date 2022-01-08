@@ -5,12 +5,12 @@
         <div class="card login-card">
             <div class="row no-gutters">
                 <div class="col-md-5">
-                    <img src="/img/login.jpg" alt="login" class="login-card-img">
+                    <img src="{{ asset('/img/login.jpg') }}" alt="login" class="login-card-img">
                 </div>
                 <div class="col-md-7">
                     <div class="card-body">
                         <div class="brand-wrapper">
-                            <img src="/img/logo.svg" alt="logo" class="logo">
+                            <img src="{{ asset('/img/logo.svg') }}" alt="logo" class="logo">
                         </div>
                         <p class="login-card-description">Register a new account</p>
                         <form method="POST" action="{{ route('register') }}">
